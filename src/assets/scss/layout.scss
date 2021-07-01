@@ -1,0 +1,74 @@
+.root{
+    display: grid;
+    padding: 2rem;
+}
+
+#app{
+    background-color: $darker;
+    min-height: 100vh;
+}
+
+#nav{
+    display: flex;
+    max-width: 920px;
+    justify-content: space-between;
+    padding: 1rem;
+
+    .router-link-active{
+        font-weight: bolder;
+    }
+
+    a{
+        position: relative;
+        color: $light;
+        &:after{
+            transition: width ease-in-out .4s;
+            content: "";
+            background-color: $success;
+            border-radius: 3px;
+            display: block;
+            position: absolute;
+            bottom: -.4rem;
+            left: 0.1rem;
+            width: 0;
+            height: .3rem;
+        }
+    }
+    a:hover {
+        color: $success;
+        
+        &:after{
+            right: 0;
+            width: 100%;
+        }
+    }
+}
+.basic-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+.createPost{
+    max-width: 32rem;
+    margin: auto;
+
+    form{
+        display: grid;
+        row-gap: .5rem;
+
+        label{
+            position: relative;
+        }
+        label:after{
+            content: "";
+            background-color: $success;
+            border-radius: 3px;
+            display: block;
+            position: absolute;
+            bottom: -.4rem;
+            right: .3rem;
+            width: 100%;
+            height: .3rem;
+        }
+    }
+}
