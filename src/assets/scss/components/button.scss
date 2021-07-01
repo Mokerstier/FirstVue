@@ -1,0 +1,14 @@
+.button{
+    background-color: $success;
+    padding: .5rem .8rem;
+    max-width: 10rem;
+    color: $darker;
+
+    &:hover{
+    background-color: lighten($success, 5%);
+    }
+
+    &:disabled{
+        background-color: $dark;
+    }
+}

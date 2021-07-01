@@ -1,0 +1,35 @@
+.header-img{
+    width: 60%;
+    transition: all ease .3s;
+    box-shadow: 0px 46px 28px -12px rgba(0,0,0,0.44);
+
+    &.small{
+        border-radius: 10px;
+        transform: rotate3d(2, 1, 1, -12deg);
+    }
+    &:hover{
+        width: 80%;
+        border-radius: 0;
+        transform: rotate3d(2, 1, 1, 0deg);
+    }
+
+    &.hero{
+        width: 100%;
+        transform: rotate3d(0, 0, 0, 0.1deg);
+    }
+}
+
+.post{
+    align-items: center;
+    border: $success 1px solid;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    grid-gap: 1rem;
+    justify-items: center;
+    padding: 1.5rem 1rem;
+
+    header{
+        align-self: stretch;
+    }
+
+}
